@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机颜色生成器</title>
+    <link rel="stylesheet" type="text/css" href="random_color.css">
+    <link rel="shortcut icon" href="../icon.jpg">
+</head>
+<body>
+    <div class="heading">
+        <ul>
+            <li><a href="../index.html">主页</a></li>
+            <li><a href="../random_words.html">随机文本 </a></li>
+            <li><a href="../music.html">听歌</a></li>
+            <li><a href="random_color.html">随机颜色</a></li>
+        </ul>
+    </div>
+    <div class="subheading">
+        随机颜色生成器
+    </div>
+    <div class="card">
+        <div class="card_left">
+            <div class="card_head">
+                设置
+            </div>
+            <div class="card_settings">
+                <p class="seter_explain">
+                     生成数量
+                </p>
+                <p class="seter">
+                    <input type="range" class="setting-range" min="1" max="100" step="1"
+                           value="50" id="number_of_colors" placeholder="数量">
+                </p>
+                <p class="seter_explain">
+                    偏好(效果不佳，推荐使用无偏好)
+                </p>
+                <p class="seter">
+                    <select class="setting-select" id="select_color_prefer">
+                        <option value="none"selected>无偏好</option>
+                        <option value="red">偏好红色</option>
+                        <option value="blue">偏好蓝色</option>
+                        <option value="green">偏好绿色</option>
+                        <option value="yellow">偏好黄色</option>
+                        <option value="purple">偏好紫色</option>
+                        <option value="clay" >偏好青色</option>
+                    </select>
+                </p>
+            </div>
+        </div>
+        <div class="card_right">
+            <div class="card_head">
+                结果
+            </div>
+            <div class="main_Content">
+                <div class="parter">#00b99e</div>
+            </div>
+        </div>
+    </div>
+    <script src="random_color.js"></script>
+</body>
+</html>
