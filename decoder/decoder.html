@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>解码</title>
+    <link rel="stylesheet" type="text/css" href="decoder.css">
+    <link rel="shortcut icon" href="../icon.jpg">
+</head>
+<body>
+    <div class="heading">
+        <ul>
+            <li><a href="../index.html">主页</a></li>
+            <li><a href="../random_words.html">随机文本 </a></li>
+            <li><a href="../music.html">听歌</a></li>
+            <li><a href="../random_color/random_color.html">随机颜色</a></li>
+            <li><a href="decoder.html">编码解码</a></li>
+        </ul>
+    </div>
+    <div class="flexIt">
+        <div class="main">
+            <p>
+                文本转ASCII码、Base64编码
+            </p>
+                <div class="input">
+                    请输入需要转换的文字<br>
+                    <textarea id="input_text"></textarea>
+                    <br>
+                    <button onclick="toASCII()">转换为ASCII码(仅限英文、数字、半角符号)</button>
+                    <button onclick="toBase64()">转换为Base64编码</button>
+                    <br>
+                    转换后的结果会在这里展示
+                    <br>
+                    <textarea id="output_text" disabled></textarea>
+                </div>
+        </div>
+        <div class="main">
+            <p>
+                ASCII码、Base64编码转文本
+            </p>
+            <div class="input">
+                请输入需要转换的文字<br>
+                <textarea id="input_text_dec"></textarea>
+                <br>
+                <button onclick="fromASCII()">ASCII码解码(十进制)</button>
+                <button onclick="fromBase64()">Base64编码解码(十六进制)</button>
+                <br>
+                转换后的结果会在这里展示
+                <br>
+                <textarea id="output_text_dec" disabled></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="decoder.js"></script>
+</body>
+</html>

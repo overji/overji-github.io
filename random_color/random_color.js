@@ -16,43 +16,51 @@ function to_hex(num)
 
 function choose_prefer(arr,prefer)
 {
-    let weight = [1,1,1];
+   let start = [0,0,0];
+   let pluser = 200;
+   let minor = 0;
+   let p_upper = 255;
+   let p_lower = 125;
+   let m_upper = 50;
+   let m_lower = 0;
     if(prefer === "red")
     {
-        weight = [0.7,0.15,0.15];
+        start = [pluser,minor,minor];
     }
     else if(prefer === "blue")
     {
-        weight = [0.15,0.15,0.7];
+        start = [minor,minor,pluser];
     }
     else if(prefer === "green")
     {
-        weight = [0.15,0.7,0.15];
+        start = [minor,pluser,minor];
     }
     else if(prefer === "clay")
     {
-        weight = [0.1,0.45,0.45];
+        start = [minor,pluser,pluser];
     }
     else if(prefer === "purple")
     {
-        weight = [0.45,0.1,0.45];
-    }else if(prefer === "blue")
+        start = [pluser,minor,pluser];
+    }
+    else if(prefer === "yellow")
     {
-        weight = [0.45,0.45,0.1];
+        start = [pluser,pluser,minor];
     }
     else if(prefer === "none")
     {
         return;
     }
-    let sum = 0;
     for(let i = 0;i < 3;i ++)
     {
-        weight[i] = arr[i]*weight[i];
-        sum += weight[i];
-    }
-    for(let i = 0;i < 3;i ++)
-    {
-        arr[i] = 255*(1-(1-weight[i]/sum)*(1-weight[i]/sum));
+        if(start[i] === pluser)
+        {
+            arr[i] = (arr[i]/255)*(p_upper-p_lower) + p_lower;
+        }
+        else
+        {
+            arr[i] = (arr[i]/255)*(m_upper-m_lower)+m_lower;
+        }
     }
 }
 

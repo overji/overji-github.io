@@ -1,0 +1,93 @@
+/* 顶部的css */
+div.heading {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(94, 92, 92);
+    font-size: 40px;
+    color: white;
+    margin: 0px;
+}
+
+div.heading ul {
+    overflow: hidden;
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+div.heading li {
+    float: left;
+}
+
+div.heading a {
+    text-decoration: none;
+    padding-left: 3px;
+    line-height: 60px;
+    text-align: center;
+    border-right: 1px white solid;
+    display: block;
+    width: auto;
+    color: white;
+    background-color: rgb(94, 92, 92);
+}
+
+div.heading a:hover {
+    background-color: black;
+}
+
+div.heading a:active {
+    background-color: rgb(181, 244, 255);
+    color: black;
+}
+
+/* 网页主体部分 */
+
+div.flexIt{
+    display: flex;
+    flex-direction: row; /* 修改此处为 row */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+div.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    color: black;
+    margin: 0;
+}
+
+div textarea {
+    width: 500px;
+    height: 170px;
+    font-size: 18px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin:3px;
+    overflow: scroll;
+}
+
+div button{
+    background-color: #a5ffc3;
+    font-size: 15px;
+    height: 30px;
+    display: inline-block;
+    color: black;
+    padding:3px;
+    margin:7px;
+    border-radius: 3px;
+}
+
+div button:hover{
+    background-color: #9be3b0;
+}
+
+
