@@ -12,3 +12,5 @@ characters, numbers, signs, Chinese characters.
 ## 2.randomly generate colors
 This function allow you to generate spcified number of colors and copy them
 as you like.
+
+## 3.Base64/ASCIIcode
